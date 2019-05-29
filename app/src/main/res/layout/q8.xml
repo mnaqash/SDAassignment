@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".q8">
 
     <TextView
         android:layout_width="wrap_content"
@@ -19,7 +19,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Q1:   2+3=?"
+        android:text="Q8:   4%2=?"
         android:paddingTop="40dp"
         android:textSize="24dp"
         android:textStyle="bold"
@@ -41,7 +41,7 @@
             android:id="@+id/b2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="  5"
+            android:text="  2"
             android:textSize="22dp"
             />
 

@@ -5,14 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
-
-import java.util.ArrayList;
+import static com.example.quizappsda.MainActivity.collectAns;
 
 public class q2 extends AppCompatActivity {
 RadioButton b1,b2,b3;
 Button next;
-    static ArrayList<String> correctAns = new ArrayList<String>();
-    static ArrayList<String> collectAns= new ArrayList<String>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

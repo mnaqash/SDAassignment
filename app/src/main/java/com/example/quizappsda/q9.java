@@ -8,11 +8,12 @@ import android.widget.RadioButton;
 
 import java.util.ArrayList;
 
+import static com.example.quizappsda.MainActivity.collectAns;
+
 public class q9 extends AppCompatActivity {
 RadioButton b1,b2,b3;
 Button next;
-    static ArrayList<String> correctAns = new ArrayList<String>();
-    static ArrayList<String> collectAns= new ArrayList<String>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +33,7 @@ Button next;
 collectAns.add("3");
         }
         if(b2.isChecked()){
-            collectAns.add("5");
+            collectAns.add("10");
         }
         if(b3.isChecked()){
             collectAns.add("6");
