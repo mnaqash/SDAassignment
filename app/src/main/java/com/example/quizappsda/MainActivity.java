@@ -6,18 +6,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 RadioButton b1,b2,b3;
-Button next;
+//RadioGroup btnId;
     static ArrayList<String> correctAns = new ArrayList<String>(){
         {
             add("5");
             add("6");
             add("1");
-            add("5");
+            add("7");
             add("3");
             add("8");
             add("8");
@@ -30,32 +32,36 @@ Button next;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        b1=(RadioButton)findViewById(R.id.b1);
-        b1=(RadioButton)findViewById(R.id.b1);
-        b1=(RadioButton)findViewById(R.id.b1);
-        next=(Button)findViewById(R.id.nextB);
+        b1=(RadioButton)findViewById(R.id.A1q1);
+        b2=(RadioButton)findViewById(R.id.A1q2);
+        b3=(RadioButton)findViewById(R.id.A1q3);
+       // btnId=(RadioGroup)findViewById(R.id.Group);
+
+
 
 
 
 
     }
 
-    public void nextQ(View view) {
+    public void nextA1(View view) {
+        //Toast.makeText(MainActivity.this, "Thank You, You've Successfully Signed Up", Toast.LENGTH_SHORT).show();
+
         if(b1.isChecked()){
-collectAns.add("3");
+        collectAns.add("3");
         }
-        if(b2.isChecked()){
+        else if(b2.isChecked()){
             collectAns.add("5");
         }
-        if(b3.isChecked()){
+        else if(b3.isChecked()){
             collectAns.add("6");
         }else{
             collectAns.add("no ans");
         }
 
-        Intent intent = new Intent(getApplicationContext(), q2.class);
+        Intent intent = new Intent(MainActivity.this, newActivity.class);
         // intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        this.startActivity(intent);
+        startActivity(intent);
         finish();
     }
 }

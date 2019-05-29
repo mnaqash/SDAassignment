@@ -13,14 +13,14 @@ import java.util.ArrayList;
 
 import static com.example.quizappsda.MainActivity.collectAns;
 
-public class q3 extends AppCompatActivity {
+public class newActivity extends AppCompatActivity {
     RadioButton b1,b2,b3;
     //RadioGroup btnId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_q3);
+        setContentView(R.layout.q2);
         b1=(RadioButton)findViewById(R.id.A21);
         b2=(RadioButton)findViewById(R.id.A22);
         b3=(RadioButton)findViewById(R.id.A23);
@@ -37,7 +37,7 @@ public class q3 extends AppCompatActivity {
         //Toast.makeText(MainActivity.this, "Thank You, You've Successfully Signed Up", Toast.LENGTH_SHORT).show();
 
         if(b1.isChecked()){
-            collectAns.add("1");
+            collectAns.add("3");
         }
         else if(b2.isChecked()){
             collectAns.add("5");
@@ -48,7 +48,7 @@ public class q3 extends AppCompatActivity {
             collectAns.add("no ans");
         }
 
-        Intent intent = new Intent(q3.this, q4.class);
+        Intent intent = new Intent(newActivity.this, q3.class);
         // intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
          finish();

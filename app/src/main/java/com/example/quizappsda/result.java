@@ -29,7 +29,7 @@ TextView correct,wrong;
 //
 //            // set some properties of rowTextView or something
             rowTextView.setTextSize(18);
-            rowTextView.setText(correctAns.get(i)+"          " +collectAns.get(i));
+            rowTextView.setText("         "+correctAns.get(i)+"                    " +collectAns.get(i));
             if(correctAns.get(i).equals(collectAns.get(i))){
                 c=c+1;
             }else{
