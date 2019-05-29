@@ -1,5 +1,6 @@
 package com.example.quizappsda;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +12,19 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 RadioButton b1,b2,b3;
 Button next;
-    static ArrayList<String> correctAns = new ArrayList<String>();
+    static ArrayList<String> correctAns = new ArrayList<String>(){
+        {
+            add("5");
+            add("6");
+            add("1");
+            add("5");
+            add("3");
+            add("8");
+            add("8");
+            add("2");
+            add("10");
+        }
+    };
     static ArrayList<String> collectAns= new ArrayList<String>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +53,9 @@ collectAns.add("3");
             collectAns.add("no ans");
         }
 
-
+        Intent intent = new Intent(getApplicationContext(), q2.class);
+        // intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        this.startActivity(intent);
+        finish();
     }
 }

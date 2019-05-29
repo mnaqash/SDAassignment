@@ -1,5 +1,6 @@
 package com.example.quizappsda;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -13,7 +14,7 @@ import static com.example.quizappsda.MainActivity.collectAns;
 public class q6 extends AppCompatActivity {
 RadioButton b1,b2,b3;
 Button next;
-   
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +41,10 @@ collectAns.add("3");
         }else{
             collectAns.add("no ans");
         }
-
+        Intent intent = new Intent(getApplicationContext(), q7.class);
+        // intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        this.startActivity(intent);
+        finish();
 
     }
 }

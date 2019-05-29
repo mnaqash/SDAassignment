@@ -1,5 +1,6 @@
 package com.example.quizappsda;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -40,7 +41,10 @@ collectAns.add("3");
         }else{
             collectAns.add("no ans");
         }
-
+        Intent intent = new Intent(getApplicationContext(), result.class);
+        // intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        this.startActivity(intent);
+        finish();
 
     }
 }
