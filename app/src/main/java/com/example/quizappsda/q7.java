@@ -1,14 +1,14 @@
 package com.example.quizappsda;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class q7 extends AppCompatActivity {
 RadioButton b1,b2,b3;
 Button next;
     static ArrayList<String> correctAns = new ArrayList<String>();
